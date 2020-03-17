@@ -8,6 +8,8 @@
 </head>
 <body>
     <div class="key-container">
+
+        
         <div data-key="65" class="key"><div class="key-text"><span>A</span><span class="key-sound">Clap</span></div></div>
         <div data-key="83" class="key"><div class="key-text"><span>S</span><span class="key-sound">HiHat</span></div></div>
         <div data-key="68" class="key"><div class="key-text"><span>D</span><span class="key-sound">Kick</span></div></div>
@@ -17,6 +19,8 @@
         <div data-key="74" class="key"><div class="key-text"><span>J</span><span class="key-sound">Snare</span></div></div>
         <div data-key="75" class="key"><div class="key-text"><span>K</span><span class="key-sound">Tom</span></div></div>
         <div data-key="76" class="key"><div class="key-text"><span>L</span><span class="key-sound">Tink</span></div></div>
+        <div id="clear"></div>
+        <textarea></textarea>
     </div>
     <audio data-key="65" src="sounds/clap.wav"></audio>
     <audio data-key="83" src="sounds/hihat.wav"></audio>
@@ -28,35 +32,40 @@
     <audio data-key="75" src="sounds/tom.wav"></audio>
     <audio data-key="76" src="sounds/tink.wav"></audio>
     <script>
-        window.onload=()=>
+
+        var bodydisp=()=>
         {
-            var bodydisp=()=>
-            {
-                console.log(document.getElementsByTagName("body"));
-            }
-            var playSound=(e)=>
-            {
-                var audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-                if(!audio) return;
-                
-                var key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
-                key.classList.add("playing");
-                
-                audio.currentTime=0;
-                audio.play();
-            }
-            var removeEvent=(e)=>
-            {
-                if(e.propertyName!=="transform") return;
-                e.target.classList.remove("playing");
-            }
-            var keys=document.querySelectorAll(".key");
-            keys.forEach(key=> {
-                console.log("ran");
-                key.addEventListener("transitionend",removeEvent)
-            });
-            window.addEventListener("keydown", playSound);
+            console.log(document.getElementsByTagName("body"));
         }
+        var playSound=(e)=>
+        {
+            var audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+            if(!audio) return;
+            
+            var key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+            key.classList.add("playing");
+            
+            audio.currentTime=0;
+            audio.play();
+        }
+        var removeEvent=(e)=>
+        {
+            if(e.propertyName!=="transform") return;
+            e.target.classList.remove("playing");
+        }
+        var keys=document.querySelectorAll(".key");
+
+        var play=(e)=>
+        {
+            console.log(e.target);
+        }
+        keys.forEach(key=> {
+            key.addEventListener("transitionend",removeEvent);
+            key.addEventListener("click", play);
+        });
+        window.addEventListener("keydown", playSound);
+
     </script>
+    <noscript>why are you still alive, your browser don't JAVASCRIPT!</noscript>
 </body>
 </html>

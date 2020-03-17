@@ -1,5 +1,9 @@
 $neon:skyblue;
 
+#clear
+{
+    clear: both;
+}
 *
 {
     margin: 0;
@@ -14,8 +18,14 @@ $neon:skyblue;
     color: $neon;
     margin: 10vh auto;
     padding: 10vh 20%;
+    textarea
+    {
+        display: block;
+        margin: 20px auto;
+    }
     .key
     {
+        cursor: pointer;
         display: block;
         float: left;
         border-radius: 5px;

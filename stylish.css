@@ -1,3 +1,7 @@
+#clear {
+  clear: both;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +18,13 @@
   padding: 10vh 20%;
 }
 
+.key-container textarea {
+  display: block;
+  margin: 20px auto;
+}
+
 .key-container .key {
+  cursor: pointer;
   display: block;
   float: left;
   border-radius: 5px;

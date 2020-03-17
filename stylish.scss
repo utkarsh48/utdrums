@@ -1,10 +1,9 @@
-$neon:skyblue;
+$neon:rgb(96, 210, 255);
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
     font-family: sans-serif;
 }
 #clear
@@ -14,16 +13,34 @@ $neon:skyblue;
 header
 {
     color: white;
-    font-size: larger;
-    background-image: linear-gradient(rgb(45,45,45),rgb(0, 170, 170));
+    background-color: rgb(30, 30, 30);
     height: 20vh;
     position: relative;
     h1
     {
+        text-align: center;
+        font-size: 3em;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
+    }
+}
+.tuet
+{
+    overflow: hidden;
+    background-color: rgb(22, 22, 22);
+    color: white;
+    text-align: center;
+    h2,h3
+    {
+        margin: 10px;
+        font-weight: normal;
+    }
+    li
+    {
+        margin: 10px;
+        list-style-type: none;
     }
 }
 .key-container
@@ -42,15 +59,14 @@ header
         cursor: pointer;
         display: block;
         float: left;
-        border-radius: 5px;
         transition-duration: 0.07s;
         border: 2px solid $neon;
         padding: 12px;
         width: 30%;
-        margin: 1%;
+        margin: 1.5%;
         height: 10vh;
-        min-height: 40px;
         position: relative;
+        box-shadow: 0 0 7px rgb(0, 0, 0);
         .key-text
         {
             position: absolute;
@@ -58,20 +74,18 @@ header
             left: 50%;
             transform: translate(-50%,-50%);
             text-transform: uppercase;
+            font-size: 2em;
             .key-sound
             {
                 color: rgb(0, 161, 224);
-                font-size: 0.9em;
-                font-weight: normal;
+                font-size: 0.5em;
             }
             span
             {
-                font-weight: bold;
                 margin: 5px;
                 text-align: center;
                 font-size: larger;
                 display: block;
-                text-shadow: 0 0 5px rgba(0, 155, 255,0.5);
             }
         }
         .overlay
@@ -89,4 +103,51 @@ header
     transform: scale(1.1);
     background-image: linear-gradient(rgb(40, 40, 40), rgb(45, 45, 45));
     box-shadow: 0 0 15px rgb(0, 183, 255);
+}
+footer
+{
+    background-color: rgb(30, 30, 30);
+    color: gray;
+    position: relative;
+    span
+    {
+        padding: 5.5vh;
+        display: block;
+        text-align: center;
+        a
+        {
+            text-decoration: none;
+            color: rgb(0, 161, 224);
+            &:hover
+            {
+                color: rgb(96, 210, 255);
+            }
+            &:active
+            {
+                color: rgb(96, 210, 255);
+            }
+        }
+    }
+}
+@media only screen and (max-width: 500px)
+{
+    header
+    {
+        font-size: 2em;
+        position: relative;
+        h1
+        {
+            font-size: 1em;
+        }
+    }
+    .key-container
+    {
+        .key
+        {
+            .key-text
+            {
+                font-size: 1.1em;
+            }
+        }
+    }
 }

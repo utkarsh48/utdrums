@@ -3,7 +3,6 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow: hidden;
   font-family: sans-serif;
 }
 
@@ -13,14 +12,14 @@
 
 header {
   color: white;
-  font-size: larger;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#2d2d2d), to(#00aaaa));
-  background-image: linear-gradient(#2d2d2d, #00aaaa);
+  background-color: #1e1e1e;
   height: 20vh;
   position: relative;
 }
 
 header h1 {
+  text-align: center;
+  font-size: 3em;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -28,9 +27,26 @@ header h1 {
           transform: translate(-50%, -50%);
 }
 
+.tuet {
+  overflow: hidden;
+  background-color: #161616;
+  color: white;
+  text-align: center;
+}
+
+.tuet h2, .tuet h3 {
+  margin: 10px;
+  font-weight: normal;
+}
+
+.tuet li {
+  margin: 10px;
+  list-style-type: none;
+}
+
 .key-container {
   background-color: #2d2d2d;
-  color: skyblue;
+  color: #60d2ff;
   margin: 0 auto;
   padding: 10vh 20%;
 }
@@ -44,16 +60,16 @@ header h1 {
   cursor: pointer;
   display: block;
   float: left;
-  border-radius: 5px;
   -webkit-transition-duration: 0.07s;
           transition-duration: 0.07s;
-  border: 2px solid skyblue;
+  border: 2px solid #60d2ff;
   padding: 12px;
   width: 30%;
-  margin: 1%;
+  margin: 1.5%;
   height: 10vh;
-  min-height: 40px;
   position: relative;
+  -webkit-box-shadow: 0 0 7px black;
+          box-shadow: 0 0 7px black;
 }
 
 .key-container .key .key-text {
@@ -63,21 +79,19 @@ header h1 {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-transform: uppercase;
+  font-size: 2em;
 }
 
 .key-container .key .key-text .key-sound {
   color: #00a1e0;
-  font-size: 0.9em;
-  font-weight: normal;
+  font-size: 0.5em;
 }
 
 .key-container .key .key-text span {
-  font-weight: bold;
   margin: 5px;
   text-align: center;
   font-size: larger;
   display: block;
-  text-shadow: 0 0 5px rgba(0, 155, 255, 0.5);
 }
 
 .key-container .key .overlay {
@@ -95,5 +109,43 @@ header h1 {
   background-image: linear-gradient(#282828, #2d2d2d);
   -webkit-box-shadow: 0 0 15px #00b7ff;
           box-shadow: 0 0 15px #00b7ff;
+}
+
+footer {
+  background-color: #1e1e1e;
+  color: gray;
+  position: relative;
+}
+
+footer span {
+  padding: 5.5vh;
+  display: block;
+  text-align: center;
+}
+
+footer span a {
+  text-decoration: none;
+  color: #00a1e0;
+}
+
+footer span a:hover {
+  color: #60d2ff;
+}
+
+footer span a:active {
+  color: #60d2ff;
+}
+
+@media only screen and (max-width: 500px) {
+  header {
+    font-size: 2em;
+    position: relative;
+  }
+  header h1 {
+    font-size: 1em;
+  }
+  .key-container .key .key-text {
+    font-size: 1.1em;
+  }
 }
 /*# sourceMappingURL=stylish.css.map */

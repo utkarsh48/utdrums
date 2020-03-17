@@ -63,6 +63,14 @@
   text-shadow: 0 0 5px rgba(0, 155, 255, 0.5);
 }
 
+.key-container .key .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .playing {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);

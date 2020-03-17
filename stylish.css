@@ -18,6 +18,7 @@ header {
 }
 
 header h1 {
+  color: #cccccc;
   text-align: center;
   font-size: 3em;
   position: absolute;
@@ -30,7 +31,7 @@ header h1 {
 .tuet {
   overflow: hidden;
   background-color: #161616;
-  color: white;
+  color: #cccccc;
   text-align: center;
 }
 
@@ -40,6 +41,7 @@ header h1 {
 }
 
 .tuet li {
+  color: white;
   margin: 10px;
   list-style-type: none;
 }
@@ -57,6 +59,7 @@ header h1 {
 }
 
 .key-container .key {
+  overflow: hidden;
   cursor: pointer;
   display: block;
   float: left;

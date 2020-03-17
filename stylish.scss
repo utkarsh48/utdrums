@@ -18,6 +18,7 @@ header
     position: relative;
     h1
     {
+        color: rgb(204, 204, 204);
         text-align: center;
         font-size: 3em;
         position: absolute;
@@ -30,7 +31,7 @@ header
 {
     overflow: hidden;
     background-color: rgb(22, 22, 22);
-    color: white;
+    color: rgb(204, 204, 204);
     text-align: center;
     h2,h3
     {
@@ -39,12 +40,13 @@ header
     }
     li
     {
+        color: white;
         margin: 10px;
         list-style-type: none;
     }
 }
 .key-container
-{
+{   
     background-color: rgb(45,45,45);
     color: $neon;
     margin: 0 auto;
@@ -56,6 +58,7 @@ header
     }
     .key
     {
+        overflow: hidden;
         cursor: pointer;
         display: block;
         float: left;
